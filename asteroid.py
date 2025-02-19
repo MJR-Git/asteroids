@@ -11,3 +11,10 @@ class Asteroid(CircleShape):
 
     def update(self, dt):
         self.position += self.velocity * dt
+
+    def split(self):
+        
+
+    def spawn(self, radius, position, velocity):
+        asteroid = Asteroid(position.x, position.y, radius)
+        asteroid.velocity = velocity
