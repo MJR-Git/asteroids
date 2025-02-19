@@ -53,6 +53,11 @@ def game_loop(screen, clock, dt, updatables, drawables, asteroids, asteroid_fiel
             
         updatables.update(dt)
 
+        for i in asteroids:
+            if i.collision(player):
+                print("Game over!")
+                return
+
         screen.fill("black")
         for i in drawables:
             i.draw(screen)
