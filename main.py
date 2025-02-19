@@ -62,8 +62,9 @@ def game_loop(screen, clock, dt, updatables, drawables, asteroids, asteroid_fiel
                 return
             for j in bullets:
                 if j.collision(i):
-                    i.kill()
                     j.kill()
+                    i.split()
+
                     
  
         screen.fill("black")
